@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="5">
+    <test verbose="2" preserve-order="true" name="testchrome">
+
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"></parameter>
+        <parameter name="username" value="Admin"></parameter>
+        <parameter name="password" value="admin123"></parameter>
+        <classes>
+            <class name="Stepdefinition.Step"></class>
+
+        </classes>
+
+
+    </test>
+    <test verbose="3" preserve-order="true" name="parametertest">
+
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"></parameter>
+        <parameter name="username" value="Admin"></parameter>
+        <parameter name="password" value="admin123"></parameter>
+        <classes>
+            <class name="Stepdefinition.Step"></class>
+        </classes>
+
+
+    </test>
+</suite>

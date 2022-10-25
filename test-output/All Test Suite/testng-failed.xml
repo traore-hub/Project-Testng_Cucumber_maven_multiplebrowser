@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="testchrome(failed)">
+    <parameter name="password" value="admin123"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="Stepdefinition.Step">
+        <methods>
+          <include name="close"/>
+          <include name="enter_the_username"/>
+          <include name="password"/>
+          <include name="verify_title"/>
+          <include name="setup"/>
+          <include name="click_button_login"/>
+        </methods>
+      </class> <!-- Stepdefinition.Step -->
+    </classes>
+  </test> <!-- testchrome(failed) -->
+  <test thread-count="5" parallel="tests" name="parametertest(failed)">
+    <parameter name="password" value="admin123"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="Stepdefinition.Step">
+        <methods>
+          <include name="close"/>
+          <include name="enter_the_username"/>
+          <include name="password"/>
+          <include name="verify_title"/>
+          <include name="setup"/>
+          <include name="click_button_login"/>
+        </methods>
+      </class> <!-- Stepdefinition.Step -->
+    </classes>
+  </test> <!-- parametertest(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
